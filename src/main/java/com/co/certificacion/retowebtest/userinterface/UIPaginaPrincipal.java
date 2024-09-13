@@ -10,5 +10,3 @@ import org.openqa.selenium.By;
 public class UIPaginaPrincipal extends PageObject {
 
 }
-
-
