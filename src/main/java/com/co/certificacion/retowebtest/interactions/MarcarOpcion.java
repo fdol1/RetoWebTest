@@ -16,13 +16,13 @@ public class MarcarOpcion implements Interaction {
     }
 
     public static MarcarOpcion deseada(Target elemento) {
-        return Tasks.instrumented(MarcarOpcion.class,elemento);
+        return Tasks.instrumented(MarcarOpcion.class, elemento);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         boolean estaMarcado = actor.asksFor(IsRadioButtonSelected.of(elemento));
-        if(!estaMarcado){
+        if (!estaMarcado) {
             actor.attemptsTo(Click.on(elemento));
         }
     }

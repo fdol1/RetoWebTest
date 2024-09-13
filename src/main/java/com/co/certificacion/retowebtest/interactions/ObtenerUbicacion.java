@@ -32,18 +32,14 @@ public class ObtenerUbicacion implements Interaction {
             actor.attemptsTo(
                     WaitUntil.the(TXT_CODIGO_POSTAL_CHECKOUT, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
                     Enter.theValue(ubicacion.get(KEY_CODIGO_POSTAL)).into(TXT_CODIGO_POSTAL_CHECKOUT),
-
                     WaitUntil.the(LISTA_PAIS_CHECKOUT, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
                     Click.on(LISTA_PAIS_CHECKOUT),
-
                     WaitUntil.the(LISTA_PAIS_VALOR_CHECKOUT, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
-                    SeleccionarItem.deLaLista(LISTA_PAIS_VALOR_CHECKOUT,ubicacion.get(KEY_PAIS)),
-
+                    SeleccionarItem.deLaLista(LISTA_PAIS_VALOR_CHECKOUT, ubicacion.get(KEY_PAIS)),
                     WaitUntil.the(LISTA_REGION_CHECKOUT, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
                     Click.on(LISTA_REGION_CHECKOUT),
-
                     WaitUntil.the(LISTA_REGION_VALOR_CHECKOUT, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
-                    SeleccionarItem.deLaLista(LISTA_REGION_VALOR_CHECKOUT,ubicacion.get(KEY_REGION) )
+                    SeleccionarItem.deLaLista(LISTA_REGION_VALOR_CHECKOUT, ubicacion.get(KEY_REGION))
             );
         }
     }

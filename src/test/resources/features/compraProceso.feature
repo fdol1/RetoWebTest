@@ -10,9 +10,8 @@ Característica: Procesos para compras
     @AgregarProductos
   Esquema del escenario: Agregar dos productos al carrito
     Dado que fer busca los productos que quiere comprar
-      | producto1   | cantidad1   | color1   | producto2   | cantidad2   | color2   |
-      | <producto1> | <cantidad1> | <color1> | <producto2> | <cantidad2> | <color2> |
-    Y verifica los precios de los productos en el carrito con y sin costo de envio
+      | producto1   | cantidad1   | color1   | precio1   | producto2   | cantidad2   | color2   | precio2   |
+      | <producto1> | <cantidad1> | <color1> | <precio1> | <producto2> | <cantidad2> | <color2> | <precio2> |
     Cuando fer se dirige al carrito y verifica gastos de envio
       | pais   | region   | codigoPostal   |
       | <pais> | <region> | <codigoPostal> |
@@ -21,5 +20,5 @@ Característica: Procesos para compras
       | <tipoCompra> | <nombre1> | <nombre2> | <email> | <tel> | <dir> | <ciudad> |
     Entonces Verifica el mensaje de compra exitosa:Your order has been placed!
     Ejemplos:
-      | producto1    | cantidad1 | color1 | producto2 | cantidad2 | color2 | pais     | region    | codigoPostal | tipoCompra | nombre1 | nombre2 | email          | tel    | dir      | ciudad   |
-      | Canon EOS 5D | 1         | Red    | iMac      | 2         | None   | Colombia | Antioquia | 050001       | Invitado   | luis    | fer     | l1@hotmail.com | 323233 | calle 10 | medellin |
+      | producto1    | cantidad1 | color1 | precio1 | producto2 | cantidad2 | color2 | precio2 | pais     | region    | codigoPostal | tipoCompra | nombre1 | nombre2 | email          | tel    | dir      | ciudad   |
+      | Canon EOS 5D | 1         | Red    | 80.00   | iMac      | 2         | None   | 100.00  | Colombia | Antioquia | 050001       | Invitado   | luis    | fer     | l1@hotmail.com | 323233 | calle 10 | medellin |

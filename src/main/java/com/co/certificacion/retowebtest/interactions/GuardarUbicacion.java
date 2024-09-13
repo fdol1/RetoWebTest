@@ -21,7 +21,7 @@ public class GuardarUbicacion implements Interaction {
     }
 
     public static GuardarUbicacion paraFacturacion(DatosEnvioModel datosEnvioModelList) {
-        return Tasks.instrumented(GuardarUbicacion.class,datosEnvioModelList);
+        return Tasks.instrumented(GuardarUbicacion.class, datosEnvioModelList);
     }
 
     @Override

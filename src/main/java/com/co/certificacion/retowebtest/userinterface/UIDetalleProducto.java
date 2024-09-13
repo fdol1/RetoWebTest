@@ -22,4 +22,10 @@ public class UIDetalleProducto {
 
     public static final Target BTN_VER_CARRITO = Target.the("Elemento para ir al carrito de compras")
             .located(By.xpath("//p[@class='text-right']//a"));
+
+    public static final Target LBL_SUB_TOTAL = Target.the("Elemento que contiene el sub total de la compra")
+            .located(By.xpath("(//td[@class='text-right'])[16]"));
+
+    public static final Target LBL_TOTAL = Target.the("Elemento que contiene el total de la compra")
+            .located(By.xpath("(//td[@class='text-right'])[18]"));
 }

@@ -40,10 +40,6 @@ public class ProcesoCompraStepDefinition {
         theActorInTheSpotlight().attemptsTo(SeleccionarProducto.aComprar(agregarProductos));
     }
 
-    @Cuando("^verifica los precios de los productos en el carrito con y sin costo de envio$")
-    public void verificaLosPreciosDeLosProductosEnElCarritoConYSinCostoDeEnvio() {
-    }
-
     @Cuando("^fer se dirige al carrito y verifica gastos de envio$")
     public void ferSeDirigeAlCarritoYVerificaGastosDeEnvio(List<DatosEnvioModel> datosEnvioModelList) {
         theActorInTheSpotlight().attemptsTo(VerCarrito.conLosProductosDeCompras(datosEnvioModelList.get(0)));

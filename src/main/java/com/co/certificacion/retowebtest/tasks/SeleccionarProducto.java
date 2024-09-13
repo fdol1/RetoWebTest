@@ -23,9 +23,6 @@ public class SeleccionarProducto implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
-        actor.attemptsTo(
-                AgregarProducto.alCarrito(listProd)
-        );
+        actor.attemptsTo(AgregarProducto.alCarrito(listProd));
     }
 }

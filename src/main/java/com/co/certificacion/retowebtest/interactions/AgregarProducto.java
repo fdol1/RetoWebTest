@@ -33,23 +33,23 @@ public class AgregarProducto implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        for (int i = 1; i <= listProd.get(0).size()/3; i++) {
+        for (int i = 1; i <= listProd.get(0).size() / 4; i++) {
 
             actor.attemptsTo(
                     WaitUntil.the(TXT_BUSCAR, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
                     Clear.field(TXT_BUSCAR),
-                    Enter.theValue(listProd.get(0).get(KEY_NOMBRE_PRODUCTO+i)).into(TXT_BUSCAR),
+                    Enter.theValue(listProd.get(0).get(KEY_NOMBRE_PRODUCTO + i)).into(TXT_BUSCAR),
                     Click.on(BTN_BUSCAR),
                     WaitUntil.the(IMG_IMAGEN_PRODUCTO, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
                     Click.on(IMG_IMAGEN_PRODUCTO),
                     Clear.field(TXT_CANTIDAD),
-                    Enter.theValue(listProd.get(0).get(KEY_CANTIDAD_PRODUCTO+i)).into(TXT_CANTIDAD));
+                    Enter.theValue(listProd.get(0).get(KEY_CANTIDAD_PRODUCTO + i)).into(TXT_CANTIDAD));
 
-            if(!Objects.equals(listProd.get(0).get(KEY_COLOR_PRODUCTO+i), NO_VALIDO)){
+            if (!Objects.equals(listProd.get(0).get(KEY_COLOR_PRODUCTO + i), NO_VALIDO)) {
                 actor.attemptsTo(
                         WaitUntil.the(LISTA_COLOR, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
                         Click.on(LISTA_COLOR),
-                        SeleccionarItem.deLaLista(LISTA_COLOR_VALOR, listProd.get(0).get(KEY_COLOR_PRODUCTO+i)));
+                        SeleccionarItem.deLaLista(LISTA_COLOR_VALOR, listProd.get(0).get(KEY_COLOR_PRODUCTO + i)));
             }
             actor.attemptsTo(Click.on(BTN_AGREGAR_AL_CARRITO));
         }
