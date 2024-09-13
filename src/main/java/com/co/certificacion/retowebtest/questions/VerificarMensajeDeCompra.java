@@ -10,16 +10,16 @@ import java.util.List;
 
 import static com.co.certificacion.retowebtest.userinterface.UIFinCompra.LBL_MENSAJE_DE_COMPRA;
 
-public class VerificarMensajeDecompra implements Question<Boolean> {
+public class VerificarMensajeDeCompra implements Question<Boolean> {
 
     private final String mensajeCompraEsperado;
 
-    public VerificarMensajeDecompra(String mensajeCompraEsperado) {
+    public VerificarMensajeDeCompra(String mensajeCompraEsperado) {
         this.mensajeCompraEsperado = mensajeCompraEsperado;
     }
 
-    public static VerificarMensajeDecompra realizada(String mensajeCompraEsperado) {
-        return new VerificarMensajeDecompra(mensajeCompraEsperado);
+    public static VerificarMensajeDeCompra realizada(String mensajeCompraEsperado) {
+        return new VerificarMensajeDeCompra(mensajeCompraEsperado);
     }
 
     @Override

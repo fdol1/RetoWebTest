@@ -2,7 +2,7 @@ package com.co.certificacion.retowebtest.stepdefinitions;
 
 import com.co.certificacion.retowebtest.models.DatosEnvioModel;
 import com.co.certificacion.retowebtest.models.DatosFacturacionModel;
-import com.co.certificacion.retowebtest.questions.VerificarMensajeDecompra;
+import com.co.certificacion.retowebtest.questions.VerificarMensajeDeCompra;
 import com.co.certificacion.retowebtest.tasks.AbrirNavegador;
 import com.co.certificacion.retowebtest.tasks.RealizarCheckout;
 import com.co.certificacion.retowebtest.tasks.SeleccionarProducto;
@@ -40,8 +40,12 @@ public class ProcesoCompraStepDefinition {
         theActorInTheSpotlight().attemptsTo(SeleccionarProducto.aComprar(agregarProductos));
     }
 
-    @Cuando("^fer se dirige al carrito he ingresa datos de envio$")
-    public void ferSeDirigeAlCarritoHeIngresaDatosDeEnvio(List<DatosEnvioModel> datosEnvioModelList) {
+    @Cuando("^verifica los precios de los productos en el carrito con y sin costo de envio$")
+    public void verificaLosPreciosDeLosProductosEnElCarritoConYSinCostoDeEnvio() {
+    }
+
+    @Cuando("^fer se dirige al carrito y verifica gastos de envio$")
+    public void ferSeDirigeAlCarritoYVerificaGastosDeEnvio(List<DatosEnvioModel> datosEnvioModelList) {
         theActorInTheSpotlight().attemptsTo(VerCarrito.conLosProductosDeCompras(datosEnvioModelList.get(0)));
     }
 
@@ -52,7 +56,7 @@ public class ProcesoCompraStepDefinition {
 
     @Entonces("^Verifica el mensaje de compra exitosa:(.*)$")
     public void verificaElMensajeDeCompraExitosa(String mensajeVerificacion) {
-        theActorInTheSpotlight().should(seeThat(VerificarMensajeDecompra.realizada(mensajeVerificacion)));
+        theActorInTheSpotlight().should(seeThat(VerificarMensajeDeCompra.realizada(mensajeVerificacion)));
 
     }
 }

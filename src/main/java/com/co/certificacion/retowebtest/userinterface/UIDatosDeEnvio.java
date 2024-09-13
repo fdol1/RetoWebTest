@@ -23,7 +23,9 @@ public class UIDatosDeEnvio {
     public static final Target TXT_CODIGO_POSTAL = Target.the("Campo para ingresar codigo postal")
             .located(By.xpath("//input[@id='input-postcode']"));
 
+    public static final Target BTN_COTIZACIONES = Target.the("Boton para ver cotizaciones")
+            .located(By.xpath("//button[@id='button-quote']"));
+
     public static final Target BTN_CHECKOUT = Target.the("Boton para continuar el proceso de compra")
             .located(By.xpath("//div[@class= 'pull-right']"));
 }
-

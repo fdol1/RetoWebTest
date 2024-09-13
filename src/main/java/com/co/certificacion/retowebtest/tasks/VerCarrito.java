@@ -14,6 +14,8 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import static com.co.certificacion.retowebtest.userinterface.UIDatosDeEnvio.*;
 import static com.co.certificacion.retowebtest.userinterface.UIDetalleProducto.BTN_ITEMS;
 import static com.co.certificacion.retowebtest.userinterface.UIDetalleProducto.BTN_VER_CARRITO;
+import static com.co.certificacion.retowebtest.userinterface.UIPopUpValorEnvio.BTN_APLICAR_COTIZACION;
+import static com.co.certificacion.retowebtest.userinterface.UIPopUpValorEnvio.RBT_VALOR_ENVIO;
 
 public class VerCarrito implements Task {
 
@@ -42,6 +44,10 @@ public class VerCarrito implements Task {
                 Click.on(LISTA_DEPARTAMENTO),
                 SeleccionarItem.deLaLista(LISTA_REGION_VALOR, datosEnvioModelList.getRegion()),
                 Enter.theValue(datosEnvioModelList.getCodigoPostal()).into(TXT_CODIGO_POSTAL),
+                Click.on(BTN_COTIZACIONES),
+                WaitUntil.the(RBT_VALOR_ENVIO, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
+                Click.on(RBT_VALOR_ENVIO),
+                Click.on(BTN_APLICAR_COTIZACION),
                 Click.on(BTN_CHECKOUT),
                 GuardarUbicacion.paraFacturacion(datosEnvioModelList)
         );
