@@ -1,11 +1,15 @@
 package com.co.certificacion.retowebtest.interactions;
 
-import com.co.certificacion.retowebtest.util.IsRadioButtonSelected;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
+
+/**
+ * Esta clase permite verificar si un elemento radio button esta selecciona y seleccionarlo
+ * Esta calse siempre que se quiera saber del estado de un elemento de tipo radio button
+ */
 
 public class MarcarOpcion implements Interaction {
 
@@ -21,8 +25,7 @@ public class MarcarOpcion implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        boolean estaMarcado = actor.asksFor(IsRadioButtonSelected.of(elemento));
-        if (!estaMarcado) {
+        if (!elemento.resolveFor(actor).isSelected()) {
             actor.attemptsTo(Click.on(elemento));
         }
     }

@@ -11,9 +11,14 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import java.util.List;
 import java.util.Map;
 
-import static com.co.certificacion.retowebtest.userinterface.UICheckout.*;
+import static com.co.certificacion.retowebtest.userinterface.UIDatosDeEnvio.*;
 import static com.co.certificacion.retowebtest.util.Constantes.*;
 import static com.co.certificacion.retowebtest.util.Constantes.KEY_CODIGO_POSTAL;
+
+/**
+ * Esta clase permite ingresar la ubicacion antes guardada en los datos de facturacion
+ * Esta calse es llamada en el proceso de ingreso de datos para la compra de productos
+ */
 
 public class ObtenerUbicacion implements Interaction {
 

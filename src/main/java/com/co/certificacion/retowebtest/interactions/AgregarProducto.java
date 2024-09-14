@@ -19,6 +19,12 @@ import static com.co.certificacion.retowebtest.userinterface.UIPaginaPrincipal.T
 import static com.co.certificacion.retowebtest.userinterface.UIResultadoBusqueda.IMG_IMAGEN_PRODUCTO;
 import static com.co.certificacion.retowebtest.util.Constantes.*;
 
+/**
+ * Esta clase permite buscar productos y agregarlos al carrito
+ * Selecciona las caracteristicas de los productos para la compra
+ * Identifica cuantos productos le han llegado desde el escenario
+ */
+
 public class AgregarProducto implements Interaction {
     private final List<Map<String, String>> listProd;
 

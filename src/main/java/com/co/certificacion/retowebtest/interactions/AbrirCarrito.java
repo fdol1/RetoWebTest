@@ -10,6 +10,11 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import static com.co.certificacion.retowebtest.userinterface.UIDetalleProducto.BTN_ITEMS;
 import static com.co.certificacion.retowebtest.userinterface.UIDetalleProducto.BTN_VER_CARRITO;
 
+/**
+ * Esta clase permite interactuar con los items que llevan al usuario al carrito
+ * Esta calse es llamada despues de agregar todos los productos listados al carrito
+ */
+
 public class AbrirCarrito implements Interaction {
 
     public AbrirCarrito() {

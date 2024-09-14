@@ -1,5 +1,9 @@
 package com.co.certificacion.retowebtest.models;
 
+/**
+ * Modelo de datos para la informacion necesaria para verificar costos de envio
+ */
+
 public class DatosEnvioModel {
 
     private String pais;

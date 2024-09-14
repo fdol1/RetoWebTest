@@ -23,6 +23,12 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
+/**
+ * Esta clase permite convertir el lenguaje de negocio del escenario a lenguaje tecnico
+ * Permite recibir la data con la que se simulará la interacción del usuario con el aplicativo
+ * Esta llamada por el runner RunnerProcesoCompra al ejecutar el artefacto de pruebas
+ */
+
 public class ProcesoCompraStepDefinition {
 
     @Before

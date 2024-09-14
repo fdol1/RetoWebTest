@@ -7,6 +7,10 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 
+/**
+ * Esta clase permite abrir el navegador en la pagina de Open cart
+ */
+
 public class AbrirNavegador implements Task {
 
     private UIPaginaPrincipal uiPaginaPrincipal;

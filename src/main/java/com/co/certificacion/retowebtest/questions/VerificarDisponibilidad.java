@@ -4,7 +4,12 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Visibility;
 
-import static com.co.certificacion.retowebtest.userinterface.UIDatosDeEnvio.LBL_MENSAJE_PRODUCTO;
+import static com.co.certificacion.retowebtest.userinterface.UICheckout.LBL_MENSAJE_PRODUCTO;
+
+/**
+ * Esta clase permite verificar que el producto agregado este disponible para la compra
+ * Esta clase es llama por ProcesoCompraStepDefinition justo despues de abrir el carrito de compras
+ */
 
 public class VerificarDisponibilidad implements Question<Boolean> {
 

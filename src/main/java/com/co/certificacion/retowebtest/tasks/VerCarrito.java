@@ -11,9 +11,17 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static com.co.certificacion.retowebtest.userinterface.UIDatosDeEnvio.*;
+import static com.co.certificacion.retowebtest.userinterface.UICheckout.*;
 import static com.co.certificacion.retowebtest.userinterface.UIPopUpValorEnvio.BTN_APLICAR_COTIZACION;
 import static com.co.certificacion.retowebtest.userinterface.UIPopUpValorEnvio.RBT_VALOR_ENVIO;
+
+/**
+ * Esta clase permite ingresar al carrito de compras y ver los productos agregados
+ * Permite verificar y aplicar costos de envio
+ * Permite ingresar los datos para validar costos
+ * Inicia el proceso de checkout para la compra
+ * Esta calse es llama despues de verificar que los productos esten disponibles
+ */
 
 public class VerCarrito implements Task {
 

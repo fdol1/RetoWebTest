@@ -11,7 +11,13 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static com.co.certificacion.retowebtest.userinterface.UICheckout.*;
+import static com.co.certificacion.retowebtest.userinterface.UIDatosDeEnvio.*;
+
+/**
+ * Esta clase permite ingresar los datos para la compra y finalizarla
+ * Esta calse es llamada despues terminar de agregar los productos al carrito he iniciar el checkout
+ * En esta clase se inicia todo el proceso de compra despues de abrir el navegador
+ */
 
 public class RealizarCheckout implements Task {
 

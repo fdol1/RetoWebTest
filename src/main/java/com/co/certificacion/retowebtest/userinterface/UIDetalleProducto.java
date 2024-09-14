@@ -3,6 +3,10 @@ package com.co.certificacion.retowebtest.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
+/**
+ * Esta clase mepea los elementos de un producto que se cliquea y se ingresa al detalle
+ */
+
 public class UIDetalleProducto {
 
     public static final Target LISTA_COLOR = Target.the("Elemento desplegable para seleccionar el color")

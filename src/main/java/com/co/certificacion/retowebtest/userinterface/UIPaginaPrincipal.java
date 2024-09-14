@@ -6,6 +6,11 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 
+/**
+ * Esta clase mepea los elementos de la pagina principal cuando
+ * se abre el navegador en el portal de open cart
+ */
+
 @DefaultUrl(Constantes.URL_PORTAL)
 public class UIPaginaPrincipal extends PageObject {
 

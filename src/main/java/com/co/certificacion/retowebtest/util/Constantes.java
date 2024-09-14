@@ -1,5 +1,10 @@
 package com.co.certificacion.retowebtest.util;
 
+/**
+ * Esta mapea datos constantes que necesita el artefacto de pruebas para
+ * tomar algunas decisiones
+ */
+
 public class Constantes {
     public static final String URL_PORTAL = "https://opencart.abstracta.us/index.php?route=common/home";
     public static final String NO_VALIDO = "None";

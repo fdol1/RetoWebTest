@@ -1,5 +1,9 @@
 package com.co.certificacion.retowebtest.models;
 
+/**
+ * Modelo de datos para la informacion necesaria para realizar compra
+ */
+
 public class DatosFacturacionModel {
 
     private String tipoCompra;
@@ -9,11 +13,6 @@ public class DatosFacturacionModel {
     private String tel;
     private String dir;
     private String ciudad;
-
-    public String getTipoCompra() {
-        return tipoCompra;
-    }
-
     public String getNombre1() {
         return nombre1;
     }

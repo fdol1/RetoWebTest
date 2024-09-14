@@ -3,6 +3,10 @@ package com.co.certificacion.retowebtest.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
+/**
+ * Esta clase mepea los elementos al finalizar la compra
+ */
+
 public class UIFinCompra {
 
     public static final Target LBL_MENSAJE_DE_COMPRA = Target.the("Elemento donde se visualiza el estado de la compra")

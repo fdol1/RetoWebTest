@@ -10,6 +10,12 @@ import java.util.List;
 
 import static com.co.certificacion.retowebtest.userinterface.UIFinCompra.LBL_MENSAJE_DE_COMPRA;
 
+/**
+ * Esta clase permite verificar que el mensaje de compra propuesto en el escenario,
+ * sea igual al obtenido al finalizar la compra.
+ * Esta clase es llama por ProcesoCompraStepDefinition al finalizar la compra
+ */
+
 public class VerificarMensajeDeCompra implements Question<Boolean> {
 
     private final String mensajeCompraEsperado;

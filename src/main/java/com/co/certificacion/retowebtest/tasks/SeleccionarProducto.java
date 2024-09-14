@@ -9,6 +9,11 @@ import net.serenitybdd.screenplay.Tasks;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Esta clase llamar dos interacciones que se encargan de agregar productos y
+ * abrir la seccion del carrito de compras respectivamente
+ */
+
 public class SeleccionarProducto implements Task {
 
     private final List<Map<String, String>> listProd;
