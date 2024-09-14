@@ -23,9 +23,9 @@ public class AbrirCarrito implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                WaitUntil.the(BTN_ITEMS, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(BTN_ITEMS, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds(),
                 Click.on(BTN_ITEMS),
-                WaitUntil.the(BTN_VER_CARRITO, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(BTN_VER_CARRITO, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds(),
                 Click.on(BTN_VER_CARRITO)
         );
     }

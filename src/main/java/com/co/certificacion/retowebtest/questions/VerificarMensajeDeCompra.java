@@ -24,8 +24,9 @@ public class VerificarMensajeDeCompra implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
+
         boolean respuesta = false;
-        actor.attemptsTo(WaitUntil.the(LBL_MENSAJE_DE_COMPRA, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds());
+        actor.attemptsTo(WaitUntil.the(LBL_MENSAJE_DE_COMPRA, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds());
         List<WebElementFacade> mensajeCompraObtenido = LBL_MENSAJE_DE_COMPRA.resolveAllFor(actor);
 
         if (mensajeCompraEsperado.equals(mensajeCompraObtenido.get(0).getText().trim())) {

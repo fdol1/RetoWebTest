@@ -7,12 +7,12 @@ Característica: Procesos para compras
     Dado que fer ingresa a la pagina de Open Cart
 
   @RutaCritica
-    @AgregarProductos
+    @comprarProductos
   Esquema del escenario: Agregar dos productos al carrito
     Dado que fer busca los productos que quiere comprar
       | producto1   | cantidad1   | color1   | precio1   | producto2   | cantidad2   | color2   | precio2   |
       | <producto1> | <cantidad1> | <color1> | <precio1> | <producto2> | <cantidad2> | <color2> | <precio2> |
-    Entonces verifica que los productos esten disponibles para la venta
+    Y verifica que los productos esten disponibles para la venta
     Cuando fer se dirige al carrito y verifica gastos de envio
       | pais   | region   | codigoPostal   |
       | <pais> | <region> | <codigoPostal> |

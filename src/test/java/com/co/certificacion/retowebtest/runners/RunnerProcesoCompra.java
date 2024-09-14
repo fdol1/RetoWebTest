@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/compraProceso.feature",
+        features = "src/test/resources/features/procesoDeCompra.feature",
         tags = "@RutaCritica",
         glue = {"com.co.certificacion.retowebtest"},
         snippets = SnippetType.CAMELCASE

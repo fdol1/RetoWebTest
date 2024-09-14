@@ -55,7 +55,7 @@ public class UICheckout {
             .located(By.xpath("//input[@name='agree']"));
 
     public static final Target BTN_CONTINUAR_PASO6 = Target.the("Boton para continuar al step #6")
-            .located(By.xpath("//input[@ID='button-payment-method']"));
+            .located(By.xpath("//input[@id='button-payment-method']"));
 
     public static final Target BTN_CONFIRMAR_COMPRA = Target.the("Boton para confirmar la compra")
             .located(By.xpath("//input[@id='button-confirm']"));

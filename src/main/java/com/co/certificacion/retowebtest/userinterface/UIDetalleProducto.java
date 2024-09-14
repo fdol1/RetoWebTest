@@ -8,7 +8,7 @@ public class UIDetalleProducto {
     public static final Target LISTA_COLOR = Target.the("Elemento desplegable para seleccionar el color")
             .located(By.xpath("//select[@id='input-option226']"));
 
-    public static final Target LISTA_COLOR_VALOR = Target.the("Elemento desplegable para seleccionar el color")
+    public static final Target LISTA_COLOR_VALOR = Target.the("Elemento color dentro de la lista desplegable de colores")
             .located(By.xpath("//select[@id='input-option226']//option"));
 
     public static final Target TXT_CANTIDAD = Target.the("Elemento para ingresar cantidad del producto")
@@ -22,10 +22,4 @@ public class UIDetalleProducto {
 
     public static final Target BTN_VER_CARRITO = Target.the("Elemento para ir al carrito de compras")
             .located(By.xpath("//p[@class='text-right']//a"));
-
-    public static final Target LBL_SUB_TOTAL = Target.the("Elemento que contiene el sub total de la compra")
-            .located(By.xpath("(//td[@class='text-right'])[16]"));
-
-    public static final Target LBL_TOTAL = Target.the("Elemento que contiene el total de la compra")
-            .located(By.xpath("(//td[@class='text-right'])[18]"));
 }

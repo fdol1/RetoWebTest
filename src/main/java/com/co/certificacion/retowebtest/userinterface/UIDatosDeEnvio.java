@@ -29,7 +29,6 @@ public class UIDatosDeEnvio {
     public static final Target BTN_CHECKOUT = Target.the("Boton para continuar el proceso de compra")
             .located(By.xpath("//div[@class= 'pull-right']"));
 
-    public static final Target LBL_MENSAJE_ERROR = Target.the("//div[@class = 'alert alert-danger alert-dismissible']")
+    public static final Target LBL_MENSAJE_PRODUCTO = Target.the("Mensaje en pantalla cuando el producto no esta disponible para la compra")
             .located(By.xpath("//div[@class = 'alert alert-danger alert-dismissible']"));
 }
-

@@ -29,7 +29,7 @@ public class RealizarCheckout implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                WaitUntil.the(RBT_INVITADO, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(RBT_INVITADO, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds(),
                 MarcarOpcion.deseada(RBT_INVITADO),
                 Click.on(BTN_CONTINUAR_PASO2),
                 Enter.theValue(datosFacturacionModelList.getNombre1()).into(TXT_PRIMER_NOMBRE),
@@ -40,13 +40,13 @@ public class RealizarCheckout implements Task {
                 Enter.theValue(datosFacturacionModelList.getCiudad()).into(TXT_CIUDAD),
                 ObtenerUbicacion.paraFacturacion(),
                 Click.on(BTN_CONTINUAR_PASO4),
-                WaitUntil.the(BTN_CONTINUAR_PASO5, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(BTN_CONTINUAR_PASO5, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds(),
                 Click.on(BTN_CONTINUAR_PASO5),
-                WaitUntil.the(RBT_ACEPTAR_TERMINOS, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(RBT_ACEPTAR_TERMINOS, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds(),
                 Click.on(RBT_ACEPTAR_TERMINOS),
-                WaitUntil.the(BTN_CONTINUAR_PASO6, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(BTN_CONTINUAR_PASO6, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds(),
                 Click.on(BTN_CONTINUAR_PASO6),
-                WaitUntil.the(BTN_CONFIRMAR_COMPRA, WebElementStateMatchers.isClickable()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(BTN_CONFIRMAR_COMPRA, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds(),
                 Click.on(BTN_CONFIRMAR_COMPRA)
         );
     }

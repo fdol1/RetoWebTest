@@ -44,7 +44,6 @@ public class ProcesoCompraStepDefinition {
     @Entonces("^verifica que los productos esten disponibles para la venta$")
     public void verificaQueLosProductosEstenDisponiblesParaLaVenta() {
         theActorInTheSpotlight().should(seeThat(VerificarDisponibilidad.deProductos()));
-
     }
 
     @Cuando("^fer se dirige al carrito y verifica gastos de envio$")
@@ -60,6 +59,5 @@ public class ProcesoCompraStepDefinition {
     @Entonces("^Verifica el mensaje de compra exitosa:(.*)$")
     public void verificaElMensajeDeCompraExitosa(String mensajeVerificacion) {
         theActorInTheSpotlight().should(seeThat(VerificarMensajeDeCompra.realizada(mensajeVerificacion)));
-
     }
 }

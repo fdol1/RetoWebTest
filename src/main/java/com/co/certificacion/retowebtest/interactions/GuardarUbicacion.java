@@ -28,13 +28,12 @@ public class GuardarUbicacion implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         List<Map<String, String>> listaUbicacion = new ArrayList<>();
-        Map<String, String> producto1 = new HashMap<>();
+        Map<String, String> ubicacion = new HashMap<>();
 
-        producto1.put(KEY_PAIS, datosEnvioModelList.getPais());
-        producto1.put(KEY_REGION, datosEnvioModelList.getRegion());
-        producto1.put(KEY_CODIGO_POSTAL, datosEnvioModelList.getCodigoPostal());
-        listaUbicacion.add(producto1);
+        ubicacion.put(KEY_PAIS, datosEnvioModelList.getPais());
+        ubicacion.put(KEY_REGION, datosEnvioModelList.getRegion());
+        ubicacion.put(KEY_CODIGO_POSTAL, datosEnvioModelList.getCodigoPostal());
+        listaUbicacion.add(ubicacion);
         actor.remember(KEY_UBICACION, listaUbicacion);
-
     }
 }

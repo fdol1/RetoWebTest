@@ -1,6 +1,5 @@
 package com.co.certificacion.retowebtest.tasks;
 
-
 import com.co.certificacion.retowebtest.interactions.AbrirCarrito;
 import com.co.certificacion.retowebtest.interactions.AgregarProducto;
 import net.serenitybdd.screenplay.Actor;

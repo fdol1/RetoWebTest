@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Visibility;
 
-import static com.co.certificacion.retowebtest.userinterface.UIDatosDeEnvio.LBL_MENSAJE_ERROR;
+import static com.co.certificacion.retowebtest.userinterface.UIDatosDeEnvio.LBL_MENSAJE_PRODUCTO;
 
 public class VerificarDisponibilidad implements Question<Boolean> {
 
@@ -17,8 +17,6 @@ public class VerificarDisponibilidad implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-
-
-        return !Visibility.of(LBL_MENSAJE_ERROR).viewedBy(actor).asBoolean();
+        return !Visibility.of(LBL_MENSAJE_PRODUCTO).viewedBy(actor).asBoolean();
     }
 }
