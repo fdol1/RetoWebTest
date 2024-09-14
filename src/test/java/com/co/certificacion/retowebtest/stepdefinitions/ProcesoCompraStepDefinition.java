@@ -2,6 +2,7 @@ package com.co.certificacion.retowebtest.stepdefinitions;
 
 import com.co.certificacion.retowebtest.models.DatosEnvioModel;
 import com.co.certificacion.retowebtest.models.DatosFacturacionModel;
+import com.co.certificacion.retowebtest.questions.VerificarDisponibilidad;
 import com.co.certificacion.retowebtest.questions.VerificarMensajeDeCompra;
 import com.co.certificacion.retowebtest.tasks.AbrirNavegador;
 import com.co.certificacion.retowebtest.tasks.RealizarCheckout;
@@ -38,6 +39,12 @@ public class ProcesoCompraStepDefinition {
     public void queFerBuscaLosProductosQueQuiereComprar(DataTable productos) {
         List<Map<String, String>> agregarProductos = productos.asMaps(String.class, String.class);
         theActorInTheSpotlight().attemptsTo(SeleccionarProducto.aComprar(agregarProductos));
+    }
+
+    @Entonces("^verifica que los productos esten disponibles para la venta$")
+    public void verificaQueLosProductosEstenDisponiblesParaLaVenta() {
+        theActorInTheSpotlight().should(seeThat(VerificarDisponibilidad.deProductos()));
+
     }
 
     @Cuando("^fer se dirige al carrito y verifica gastos de envio$")
