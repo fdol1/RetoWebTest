@@ -1,21 +1,48 @@
-# Automatización web ( Swag labs web )
+# Automatización web ( Open Cart )
 
 ## Nombre
-### Reto_SwagLabs
+### Reto de automatización web para la companía Sofka
 
 ## Descripción
-Este es un proyecto de automatización web el cual se encargar de ejecutar unas pruebas E2E en un aplicativo web de ventas
+Este es un artefacto de pruebas el cual se encarga de ejecutar una prueba E2E en una plataforma Web llamada Open Cart.
+
+Este robot de pruebas cuenta con las siguiente capacidades
+
+1 Abrir el navegador en la pagina principal de Open Cart
+
+2 Buscar productos por sus nombres y seleccionar las caracteristicas necesarias para la compra
+
+3 Verifica costos de envío
+
+4 Ingresa informacion para facturación y verificación de costos
+
+5 Confirmar pago
+
+6 Verificar mensaje al finalizar una compra
 
 ## Requisitos para ejecución en Intelli-j
 Para un correcto uso del robot de pruebas y obtener de él, el comportamiento esperado, es necesario
 a la hora de ejecutar, utilizar:
 
-Stack Tecnológico
+### Stack Tecnológico
 
-•	Screenplay
+•	Screenplay Pattern
+
 •	Gradle
-•	Cucumber BDD
+
+•	Cucumber
+
 •	Serenity BDD
+
+•   Git
+
+•   Java
+
+•   Gradle
+
+•   Selenium WebDriver
+
+### Compilación
 
 1 SDK 1.8 java version 1.8.0_322
 
