@@ -7,6 +7,12 @@ import net.serenitybdd.screenplay.targets.Target;
 
 import java.util.List;
 
+/**
+ * Esta clase permite seleccionar un item de una lista desplegable
+ * Identifica el item en la lista por medio del nombre y lo selecciona
+ * Esta calse es llamada siempre que se tengan elementos seleccionables en listas
+ */
+
 public class SeleccionarItem implements Interaction {
 
     private Target lista;
