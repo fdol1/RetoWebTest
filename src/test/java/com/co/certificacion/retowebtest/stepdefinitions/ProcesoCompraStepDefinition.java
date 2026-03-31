@@ -1,6 +1,7 @@
 package com.co.certificacion.retowebtest.stepdefinitions;
 
 
+import com.co.certificacion.retowebtest.questions.VerificarMensajeDeAviso;
 import com.co.certificacion.retowebtest.questions.VerificarMensajeDeCompra;
 import com.co.certificacion.retowebtest.tasks.AbrirNavegador;
 import com.co.certificacion.retowebtest.tasks.GenerarCompra;
@@ -44,8 +45,14 @@ public class ProcesoCompraStepDefinition {
     }
 
     @Entonces("Verifica el mensaje de compra exitosa:{string}")
-    public void verificaElMensajeDeCompraExitosaYourOrderHasBeenPlaced(String mensajeVerificacion) {
+    public void verificaElMensajeDeCompraExitosa(String mensajeVerificacion) {
         theActorInTheSpotlight().should(seeThat(VerificarMensajeDeCompra.realizada(mensajeVerificacion)));
+
+    }
+
+    @Entonces("Verifica el mensaje de aviso: {string}")
+    public void verificaElMensajeDeAviso(String mensajeVerificacion) {
+        theActorInTheSpotlight().should(seeThat(VerificarMensajeDeAviso.faltaUnDato(mensajeVerificacion)));
 
     }
 }

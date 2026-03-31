@@ -1,4 +1,7 @@
 package com.co.certificacion.retowebtest.interactions;
+/**
+ * Esta clase permite incluir la cantidad de producto indicada para cada articulo en el escenario
+ */
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;

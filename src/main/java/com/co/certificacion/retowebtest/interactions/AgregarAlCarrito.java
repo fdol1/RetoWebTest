@@ -1,26 +1,22 @@
 package com.co.certificacion.retowebtest.interactions;
+/**
+ * Esta clase permite buscar productos y agregarlos al carrito
+ * Selecciona las caracteristicas de los productos para la compra
+ * Identifica cuantos productos le han llegado desde el escenario
+ */
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.List;
 import java.util.Map;
 
-import static com.co.certificacion.retowebtest.userinterface.UIDetalleProducto.BTN_AGREGAR_AL_CARRITO;
 import static com.co.certificacion.retowebtest.userinterface.UIPaginaPrincipal.*;
 import static com.co.certificacion.retowebtest.utils.Constantes.KEY_CANTIDAD;
 import static com.co.certificacion.retowebtest.utils.Constantes.KEY_PRODUCTO;
-
-/**
- * Esta clase permite buscar productos y agregarlos al carrito
- * Selecciona las caracteristicas de los productos para la compra
- * Identifica cuantos productos le han llegado desde el escenario
- */
 
 public class AgregarAlCarrito implements Interaction {
     private final List<Map<String, String>> listProd;

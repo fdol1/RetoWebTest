@@ -7,18 +7,18 @@ package com.co.certificacion.retowebtest.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import static com.co.certificacion.retowebtest.userinterface.UICarritoDeCompras.LBL_MENSAJE_EXITOSO_DE_COMPRA;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 
-public class VerificarMensajeDeCompra implements Question<Boolean> {
+public class VerificarMensajeDeAviso implements Question<Boolean> {
 
     private final String mensajeCompraEsperado;
 
-    public VerificarMensajeDeCompra(String mensajeCompraEsperado) {
+    public VerificarMensajeDeAviso(String mensajeCompraEsperado) {
         this.mensajeCompraEsperado = mensajeCompraEsperado;
     }
 
-    public static VerificarMensajeDeCompra realizada(String mensajeCompraEsperado) {
-        return new VerificarMensajeDeCompra(mensajeCompraEsperado);
+    public static VerificarMensajeDeAviso faltaUnDato(String mensajeCompraEsperado) {
+        return new VerificarMensajeDeAviso(mensajeCompraEsperado);
     }
 
     @Override
@@ -26,11 +26,10 @@ public class VerificarMensajeDeCompra implements Question<Boolean> {
 
         boolean respuesta = false;
 
-        String mensajeCompraObtenido = LBL_MENSAJE_EXITOSO_DE_COMPRA
-                .resolveFor(actor)
-                .getText();
-
-        if (mensajeCompraEsperado.equals(mensajeCompraObtenido.trim())) {
+        var alert = BrowseTheWeb.as(actor).getDriver().switchTo().alert();
+        String mensajeObtenido = alert.getText();
+        alert.accept();
+        if (mensajeCompraEsperado.equals(mensajeObtenido.trim())) {
             respuesta = true;
         }
         return respuesta;

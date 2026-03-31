@@ -8,7 +8,7 @@ Característica: Procesos para compras
 
   @RutaCritica
     @comprarProductos
-  Esquema del escenario: Agregar dos productos al carrito
+  Esquema del escenario: Comprar dos productos al carrito
     Dado que fer busca los productos que quiere comprar
       | producto1   | cantidad1   | precio1   | producto2   | cantidad2   | precio2   |
       | <producto1> | <cantidad1> | <precio1> | <producto2> | <cantidad2> | <precio2> |
@@ -19,3 +19,20 @@ Característica: Procesos para compras
     Ejemplos:
       | producto1         | cantidad1 | precio1 | producto2        | cantidad2 | precio2 | nombre   | pais     | ciudad   | tarjetaCredito | mes | anio |
       | Samsung galaxy s6 | 1         | 360     | Nokia lumia 1520 | 2         | 820     | Fernando | Colombia | Medellín | 7896355413     | 12  | 2026 |
+
+
+  @RutaCritica
+    @comprarProductos
+  Esquema del escenario: Comprar dos productos, sin registrar el nombre
+    Dado que fer busca los productos que quiere comprar
+      | producto1   | cantidad1   | precio1   | producto2   | cantidad2   | precio2   |
+      | <producto1> | <cantidad1> | <precio1> | <producto2> | <cantidad2> | <precio2> |
+    Cuando Ingresa los datos de facturacion para la compra y finaliza la compra
+      | nombre   | pais   | ciudad   | tarjetaCredito   | mes   | anio   |
+      | <nombre> | <pais> | <ciudad> | <tarjetaCredito> | <mes> | <anio> |
+    Entonces Verifica el mensaje de aviso: "Please fill out Name and Creditcard."
+    Ejemplos:
+      | producto1         | cantidad1 | precio1 | producto2        | cantidad2 | precio2 | nombre   | pais     | ciudad   | tarjetaCredito | mes | anio |
+      | Samsung galaxy s6 | 1         | 360     | Nokia lumia 1520 | 2         | 820     |  | Colombia | Medellín | 7896355413     | 12  | 2026 |
+
+
