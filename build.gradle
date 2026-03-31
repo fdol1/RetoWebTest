@@ -1,0 +1,31 @@
+plugins {
+    id("java")
+    id("idea")
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.11'
+}
+
+group = "com.co.certificacion.retowebtest"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '4.2.9'
+    serenityCucumberVersion = '4.2.9'
+}
+
+dependencies {
+    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+
+    testImplementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
+    implementation("io.github.bonigarcia:webdrivermanager:5.6.3")
+}
+
+gradle.startParameter.continueOnFailure = true
