@@ -29,10 +29,6 @@ public class VerificarMensajeDeCompra implements Question<Boolean> {
         String mensajeCompraObtenido = LBL_MENSAJE_EXITOSO_DE_COMPRA
                 .resolveFor(actor)
                 .getText();
-
-        System.out.println(mensajeCompraObtenido);
-        System.out.println(mensajeCompraEsperado);
-
         if (mensajeCompraEsperado.equals(mensajeCompraObtenido.trim())) {
             respuesta = true;
         }

@@ -33,7 +33,6 @@ public class AgregarCantidad implements Interaction {
                     EsperarElemento.mientrasCarga()
             );
             var alert = BrowseTheWeb.as(actor).getDriver().switchTo().alert();
-            System.out.println(alert.getText());
             alert.accept();
         }
         actor.attemptsTo(
