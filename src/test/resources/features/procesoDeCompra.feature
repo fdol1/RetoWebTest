@@ -17,5 +17,5 @@ Característica: Procesos para compras
       | <nombre> | <pais> | <ciudad> | <tarjetaCredito> | <mes> | <anio> |
     Entonces Verifica el mensaje de compra exitosa:"Thank you for your purchase!"
     Ejemplos:
-      | producto1      | cantidad1 | precio1 | producto2        | cantidad2 | precio2 | nombre   | pais     | ciudad   | tarjetaCredito | mes | anio |
-      | Sony xperia z5 | 1         | 360     | Nokia lumia 1520 | 2         | 820     | Fernando | Colombia | Medellín | 7896355413     | 12  | 2026 |
+      | producto1         | cantidad1 | precio1 | producto2        | cantidad2 | precio2 | nombre   | pais     | ciudad   | tarjetaCredito | mes | anio |
+      | Samsung galaxy s6 | 1         | 360     | Nokia lumia 1520 | 2         | 820     | Fernando | Colombia | Medellín | 7896355413     | 12  | 2026 |

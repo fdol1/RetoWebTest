@@ -13,6 +13,7 @@ import java.util.Map;
 
 import static com.co.certificacion.retowebtest.userinterface.UIDetalleProducto.BTN_AGREGAR_AL_CARRITO;
 import static com.co.certificacion.retowebtest.userinterface.UIPaginaPrincipal.*;
+import static com.co.certificacion.retowebtest.utils.Constantes.KEY_CANTIDAD;
 import static com.co.certificacion.retowebtest.utils.Constantes.KEY_PRODUCTO;
 
 /**
@@ -39,17 +40,9 @@ public class AgregarAlCarrito implements Interaction {
             actor.attemptsTo(
                     WaitUntil.the(BTN_HOME, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds(),
                     SeleccionarItem.deLaLista(LIST_NOMBRE_PRODUCTOS, listProd.get(0).get(KEY_PRODUCTO + i)),
-                    WaitUntil.the(BTN_AGREGAR_AL_CARRITO, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds(),
-                    Click.on(BTN_AGREGAR_AL_CARRITO),
-                    EsperarElemento.mientrasCarga()
-                    //AgregarAlCarrito.laCantidadSeleccionada(listProd.get(0).get(KEY_CANTIDAD + i)),
+                    AgregarCantidad.delProducto(listProd.get(0).get(KEY_CANTIDAD + i))
             );
-            var alert = BrowseTheWeb.as(actor).getDriver().switchTo().alert();
-            System.out.println(alert.getText());
-            alert.accept();
-            actor.attemptsTo(
-                    WaitUntil.the(BTN_HOME, WebElementStateMatchers.isVisible()).forNoMoreThan(15).seconds(),
-                    Click.on(BTN_HOME));
+
         }
     }
 }
